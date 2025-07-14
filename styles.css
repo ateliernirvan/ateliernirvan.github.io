@@ -275,16 +275,22 @@ html {
 
 @media (max-width: 600px) {
     #about-content {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         min-height: 250px;
         padding: 1em;
     }
 
     #top {
-        grid-column: 1 / 4;
+        grid-row: 3 / 4;
+        grid-column: 1 / 5;
         max-width: 100%;
         padding: 0.5em;
     }
     #bottom {
+        grid-row: 4 / 5;
+        grid-column: 1 / 5;
         max-width: 100%;
         padding: 0.5em;
     }
