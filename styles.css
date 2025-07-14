@@ -224,7 +224,7 @@ html {
     background: rgba(166, 124, 82, 0.8); /* Slightly lighter brown with transparency for hover effect */
 }
 /* Sekce about rozdělena na 3x3 grid, top v levém horním rohu, bottom ve spodní třetině */
-#about {
+#about-content {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
@@ -261,7 +261,7 @@ html {
 }
 
 @media (max-width: 600px) {
-    #about {
+    #about-content {
         min-height: 250px;
         padding: 1em;
     }
