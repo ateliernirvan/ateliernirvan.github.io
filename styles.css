@@ -266,7 +266,12 @@ html {
         padding: 1em;
     }
 
-    #top, #bottom {
+    #top {
+        grid-column: 1 / 4;
+        max-width: 100%;
+        padding: 0.5em;
+    }
+    #bottom {
         max-width: 100%;
         padding: 0.5em;
     }
