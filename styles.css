@@ -224,18 +224,31 @@ html {
     background: rgba(166, 124, 82, 0.8); /* Slightly lighter brown with transparency for hover effect */
 }
 /* Sekce about rozdělena na 3x3 grid, top v levém horním rohu, bottom ve spodní třetině */
+
+#about {
+    background-image: url('images/ja_nirvan.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
 #about-content {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     min-height: 400px;
     position: relative;
-    background-image: url('images/ja_nirvan.jpg');
+    /* background-image: url('images/ja_nirvan.jpg');
     background-size: cover;
     background-position: top center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     color: #fff;
     padding: 2em;
+}
+
+#aboutme-text {
+    text-align: left;
+    color: #fff; /* Ensure text is readable against the background */
 }
 
 #top {
