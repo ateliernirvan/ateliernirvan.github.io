@@ -22,7 +22,7 @@ menuButton.addEventListener('click', () => {
 });
 
 // Toggle "about" section visibility
-const aboutToggle = document.getElementById('about-toggle');
+/* const aboutToggle = document.getElementById('about-toggle');
 const aboutFull = document.getElementById('about-full');
 const aboutSummary = document.getElementById('about-summary');
 
@@ -36,7 +36,7 @@ aboutToggle.addEventListener('click', () => {
         aboutSummary.style.display = 'block';
         aboutToggle.textContent = 'Zobrazit více';
     }
-});
+}); */
 
 // Load references from JSON file
 async function loadReferences() {
