@@ -355,6 +355,15 @@ html {
     background-position: top center;
     background-repeat: no-repeat;
 }
+
+#home {
+    background-image: url('images/masaz.png');
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: auto; /* Automatically adjusts height based on the image's aspect ratio */
+    height: 50vh; /* Full viewport height */
+}
+
 #yoga {
     position: relative;
     background: none;
