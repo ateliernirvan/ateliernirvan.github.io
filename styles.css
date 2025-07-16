@@ -1,12 +1,12 @@
 @media (max-width: 700px) {
     #home-questions {
-        grid-template-columns: 1fr;
-        gap: 0.7em;
+        gap: 0.8em;
+        padding: 1em;
     }
     #home-questions > div {
-        max-width: 100vw;
+        width: calc(50% - 0.8em); /* Two per row on smaller screens */
         font-size: 1em;
-        padding: 0.8em 0.7em 0.8em 0.8em;
+        padding: 0.8em;
     }
 }
 /* Pozadí pro sekci home-bottom s průhledným obrázkem přes celou šířku */
@@ -671,7 +671,6 @@ html {
 }
 
 #home-questions > div {
-    background-color: #ffeb3b; /* Sticky note yellow */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
     padding: 1.2em;
@@ -682,15 +681,51 @@ html {
     justify-content: center;
     width: calc(30% - 1em);
     height: auto;
-    transform: rotate(calc(-5deg + 10deg * var(--rotation)));
+    transform: rotate(calc(-2deg + 4deg * var(--rotation)));
     position: relative;
+    transition: transform 0.2s ease;
 }
 
-/* Add randomness for informal appearance */
-#home-questions > div:nth-child(odd) {
+/* Add multiple colors for sticky notes */
+#home-questions > div:nth-child(1) {
     --rotation: 1;
+    background-color: #ffeb3b; /* Yellow */
 }
 
-#home-questions > div:nth-child(even) {
+#home-questions > div:nth-child(2) {
     --rotation: -1;
+    background-color: #81c784; /* Light green */
+}
+
+#home-questions > div:nth-child(3) {
+    --rotation: 0.5;
+    background-color: #90caf9; /* Light blue */
+}
+
+#home-questions > div:nth-child(4) {
+    --rotation: -0.8;
+    background-color: #f48fb1; /* Light pink */
+}
+
+#home-questions > div:nth-child(5) {
+    --rotation: 0.2;
+    background-color: #ce93d8; /* Light purple */
+}
+
+/* Add hover effect */
+#home-questions > div:hover {
+    transform: scale(1.05) rotate(calc(-2deg + 4deg * var(--rotation)));
+    z-index: 10;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+    #home-questions > div {
+        width: 100%; /* Full width on very small screens */
+        transform: none; /* Remove rotation on very small screens for better readability */
+    }
+    
+    #home-questions > div:hover {
+        transform: scale(1.02); /* Subtle scale effect without rotation */
+    }
 }
