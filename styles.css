@@ -130,15 +130,59 @@ header {
     box-shadow: 0 2px 1px rgba(0,0,0,0.05);
 }
 
-#desktop-menu ul {
+#desktop-menu .desktop-menu-row {
+    max-width: 1024px;
     width: 100%;
+    margin: 0 auto;
+}
+
+#desktop-menu ul {
     display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+    /* ostatní styly zůstanou */
+}
+
+
+.desktop-menu-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
     justify-content: space-evenly;
     align-items: center;
     gap: 0;
-    margin: 0;
     padding: 0 2vw;
-    list-style: none;
+    box-sizing: border-box;
+}
+
+.desktop-menu-box {
+    flex: 1 1 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.desktop-menu-box a {
+    color: #000;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    padding: 0.4em 1.2em;
+    border-radius: 8px;
+    display: block;
+}
+
+.desktop-menu-box:hover {
+    background: #cfd8d0;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+.desktop-menu-box a:hover, .desktop-menu-box a:focus {
+    color: #4b3f2f;
+    text-decoration: none;
 }
 
 #siteName {
@@ -176,12 +220,18 @@ header {
 main {
     margin-top: 40px; /* Match the new header height */
     padding: 0;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 section {
     padding: 3.5rem 5%;
     width: 100%;
     box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+    scroll-margin-top: 60px;
 }
 
 section:nth-child(odd) {
