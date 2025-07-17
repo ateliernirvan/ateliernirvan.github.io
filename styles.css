@@ -649,20 +649,9 @@ html {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* Mobile adjustments */
-@media (max-width: 480px) {
-    #home-questions > div {
-        width: 100%; /* Full width on very small screens */
-        transform: none; /* Remove rotation on very small screens for better readability */
-    }
-    
-    #home-questions > div:hover {
-        transform: scale(1.02); /* Subtle scale effect without rotation */
-    }
-}
-
+/* Ensure mobile menu is visible only in mobile responsive views */
 @media (max-width: 600px) {
-    #about-content {
+        #about-content {
         display: grid;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -721,9 +710,6 @@ html {
         height: 100%;
         padding-bottom: 0;
     }
-}
-
-@media (max-width: 700px) {
     #home-questions {
         gap: 0.8em;
         padding: 1em;
@@ -733,14 +719,12 @@ html {
         font-size: 1em;
         padding: 0.8em;
     }
-}
-
-/* Ensure mobile menu is visible only in mobile responsive views */
-@media (max-width: 768px) {
-    #mobile-menu {
-        display: none; /* Default hidden state */
+    #yoga-container {
+        font-size: 1em;
     }
-
+    #therapy {
+        font-size: 1em;
+    }
     #mobile-menu.visible {
         display: block; /* Show menu when toggled */
     }
