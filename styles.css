@@ -651,7 +651,7 @@ html {
 
 /* Ensure mobile menu is visible only in mobile responsive views */
 @media (max-width: 600px) {
-        #about-content {
+    #about-content {
         display: grid;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -664,12 +664,14 @@ html {
         grid-column: 1 / 5;
         max-width: 100%;
         padding: 0.5em;
+        font-size: 0.7em;
     }
     #bottom {
         grid-row: 4 / 5;
         grid-column: 1 / 5;
         max-width: 100%;
         padding: 0.5em;
+        font-size: 0.7em;
     }
 
     #home {
