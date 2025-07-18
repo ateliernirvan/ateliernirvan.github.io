@@ -25,7 +25,7 @@
 
 #home {
     position: relative; /* Set position relative */
-    background-image: url('images/masaz.png');
+    background-image: url('images/masaz.jpg');
     background-size: cover;
     background-position: center;
     aspect-ratio: auto; /* Automatically adjusts height based on the image's aspect ratio */
@@ -772,4 +772,31 @@ html {
     width: 32px; /* Standard icon size */
     height: 32px; /* Maintain aspect ratio */
     margin-right: 8px; /* Add spacing between icon and text */
+}
+
+/* Kontakt section styling */
+#contact {
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+#contact h2 {
+    margin-bottom: 1.5rem;
+}
+
+#contact p {
+    margin: 0.5rem 0;
+}
+
+.contact-content {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
 }
