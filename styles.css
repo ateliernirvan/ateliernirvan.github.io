@@ -508,17 +508,18 @@ html {
 #about-content {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     min-height: 400px;
     position: relative;
     color: #fff;
-    padding: 2em;
+    padding: 1em;
     z-index: 10; /* Match the parent section's z-index */
 }
 
 #aboutme-text {
     text-align: left;
-    color: #fff; /* Ensure text is readable against the background */
+    color: #000; /* Black text color */
+    text-shadow: 0 1px 2px #fff; /* White shadow for contrast */
 }
 
 #top {
@@ -654,9 +655,9 @@ html {
 @media (max-width: 600px) {
     #about-content {
         display: grid;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        min-height: 250px;
+        min-height: 150px;
         padding: 1em;
     }
 
@@ -757,4 +758,10 @@ html {
         display: block;
         width: 100%;
     }
+}
+
+#social-media img {
+    width: 32px; /* Standard icon size */
+    height: 32px; /* Maintain aspect ratio */
+    margin-right: 8px; /* Add spacing between icon and text */
 }
