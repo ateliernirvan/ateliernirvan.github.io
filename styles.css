@@ -759,6 +759,14 @@ html {
     }
 }
 
+#social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px; /* Add spacing between icons */
+    margin-top: 16px; /* Add spacing above the social media section */
+}
+
 #social-media img {
     width: 32px; /* Standard icon size */
     height: 32px; /* Maintain aspect ratio */
