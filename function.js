@@ -13,10 +13,7 @@ async function loadSection(sectionId, filePath) {
 
 document.addEventListener('DOMContentLoaded', () => {
     loadSection('contact', 'contact.htmls');
-    loadSection('therapy', 'therapy.htmls');
-    loadSection('about', 'aboutme.top.html');
-    loadSection('about-me-more', 'aboutme.more.html');
-    loadSection('yoga', 'yoga.htmls');
+
     loadSection('gallery', 'gallery.html');
     setTimeout(loadGallery, 500); // Load gallery with a small delay to ensure section is loaded
 }
