@@ -105,4 +105,39 @@ carousel.addEventListener('touchend', (e) => {
 });
 
 // Initialize carousel
-document.addEventListener('DOMContentLoaded', loadReferences);
+document.addEventListener('DOMContentLoaded', () => {
+    loadReferences();
+    setupTreeAnimation();
+});
+
+// Setup tree animation with intersection observer
+function setupTreeAnimation() {
+    const tree = document.getElementById('tree-img');
+    const treeBox = document.getElementById('tree-box');
+    const homeSection = document.getElementById('home');
+    
+    // Simple gentle swaying animation for the tree
+    if (tree) {
+        setInterval(() => {
+            const randomRotation = Math.sin(Date.now() / 3000) * 1.5; // Gentle swaying
+            tree.style.transform = `rotate(${randomRotation}deg)`;
+        }, 100);
+    }
+    
+    // Setup intersection observer to hide tree when scrolling out of home section
+    if (homeSection && treeBox) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Home section is visible
+                    treeBox.style.opacity = '1';
+                } else {
+                    // Home section is not visible
+                    treeBox.style.opacity = '0';
+                }
+            });
+        }, { threshold: 0.1 }); // Trigger when 10% of the section is visible
+        
+        observer.observe(homeSection);
+    }
+}

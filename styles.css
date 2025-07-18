@@ -57,18 +57,19 @@
 }
 
 #tree-box {
-    position: fixed; /* Use fixed positioning to stay visible across sections */
-    top: 98px; /* Position below the header (header height + menu height) */
+    position: absolute; /* Confined to home section */
+    top: 0;
     right: 0;
     width: 40%;
-    height: 100vh; /* Full viewport height */
+    height: 100%; /* Full height of parent container */
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-end;
     margin: 0;
     box-sizing: border-box;
-    z-index: 3; /* Lower z-index so it appears behind the about section */
-    pointer-events: none;
+    z-index: 2; /* Make sure it's above the background but below text */
+    pointer-events: none; /* Allow clicking through the tree */
+    transition: opacity 0.5s ease; /* Smooth transition for opacity changes */
 }
 
 #tree-img {
@@ -80,6 +81,7 @@
     filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
     display: block;
     opacity: 0.85; /* Slightly more visible */
+    transition: all 0.5s ease; /* Smooth transition for any effects */
 }
 
 
@@ -444,7 +446,7 @@ html {
 /* Sekce about rozdělena na 3x3 grid, top v levém horním rohu, bottom ve spodní třetině */
 
 #about {
-    background-image: url('images/ja_nirvan.jpg');
+    background-image: url('images/levi-nirvan.jpg');
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -606,7 +608,7 @@ html {
 
 /* Style for answer to the questions */
 #home-answer {
-    background-color: rgba(245, 196, 196, 0.5); /* Light pastel red with 50% transparency */
+    background-color: rgba(253, 251, 239, 0.5); /* Light pastel red with 50% transparency */
     color: rgba(75, 63, 47, 1); /* Fully visible text color */
     padding: 1.8em 2em;
     margin: 2em auto 1em;
@@ -691,9 +693,9 @@ html {
     }
     #tree-box {
         width: 50%;
-        height: 80vh; /* Shorter height on mobile */
-        top: 80px; /* Adjust for mobile header height */
-        z-index: 1; /* Ensure it's above the home section */
+        height: 100%; /* Full height of parent container on mobile too */
+        top: 0; /* Align with the top of home section */
+        z-index: 1; /* Ensure it's above the background but below text */
     }
     #tree-img {
         width: auto;
