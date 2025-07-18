@@ -4,11 +4,18 @@
     padding: 2rem 0;
 }
 
+#gallery h2 {
+    color: #8b5a2b; /* Match color from main styles */
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    padding: 0 5%; /* Match padding from section style */
+}
+
 #gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
-    padding: 1em;
+    padding: 1em 5%; /* Match section padding */
 }
 
 .gallery-item {
