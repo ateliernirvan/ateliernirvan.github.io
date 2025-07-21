@@ -88,7 +88,7 @@
 /* Add global font style */
 body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #f0f4f8; /* Light blue sky background */
+    background-color: #f0f4f8; /* Light blue sky background #f0f4f8*/
     color: #000; /* Neutral text color for readability */
     margin: 0;
     padding: 0;
@@ -275,6 +275,19 @@ section:nth-child(odd) {
 
 section:nth-child(even) {
     background-color: rgba(245, 245, 220, 0.7); /* Light beige with transparency */
+}
+
+.section-separator {
+    display: block;
+    width: 100%;
+    max-width: 1024px;
+    height: auto;
+    margin: 0 auto;
+    padding: 5px 5%;
+    box-sizing: border-box;
+    opacity: 0.5;
+    max-height: 30px;
+    background-color: transparent;
 }
 
 h2 {
